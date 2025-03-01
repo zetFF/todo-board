@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>4TODO Board</title>
+    <title>4TODO | Todospace With Your Plan Actifity</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
@@ -47,7 +47,7 @@
     }
 }">
     <!-- Sidebar -->
-    <div class="fixed inset-y-0 left-0 w-64 bg-[#0A192F] text-white">
+    <div class="fixed inset-y-0 left-0 w-64 bg-[#0A192F] text-white flex flex-col">
         <!-- Logo/Brand -->
         <div class="border-gray-200 border-b  border-neutral-700">
             <h1 class="text-3xl font-bold text-center mt-11 mb-10 ">4TO<span class="text-indigo-600">DO</span></h1>
@@ -199,8 +199,8 @@
                      x-transition:enter-start="opacity-0 -translate-y-2"
                      x-transition:enter-end="opacity-100 translate-y-0"
                      x-transition:leave="transition ease-in duration-150"
-                     x-transition:leave-start="opacity-100 translate-y-0"
-                     x-transition:leave-end="opacity-0 -translate-y-2"
+                     x-transition:leave-start="opacity-100 transform translate-y-0"
+                     x-transition:leave-end="opacity-0 transform -translate-y-2"
                      class="pl-12 pr-4 py-2 space-y-2">
                     <a href="{{ route('todos.index', ['category' => 'personal']) }}" 
                        class="flex items-center px-4 py-2 text-sm text-gray-200 hover:text-purple-600 hover:bg-purple-50 rounded-lg transition-colors duration-200 {{ request('category') === 'personal' ? 'bg-purple-50 text-purple-600' : '' }}">
@@ -248,6 +248,52 @@
             <!-- Reports -->
        
         </nav>        
+
+        <!-- Spacer to push logout to bottom -->
+        <div class="flex-grow"></div>
+
+        <!-- Logout Section -->
+        <div class="p-6 border-t border-neutral-700">
+            <!-- User Profile Section -->
+            <div class="flex items-center mb-4">
+                <div class="w-10 h-10 rounded-full bg-indigo-600 flex items-center justify-center text-white font-semibold">
+                    {{ substr(auth()->user()->name, 0, 1) }}
+                </div>
+                <div class="ml-3">
+                    <p class="text-sm font-medium text-white">{{ auth()->user()->name }}</p>
+                    <p class="text-xs text-gray-400">{{ auth()->user()->email }}</p>
+                </div>
+            </div>
+
+            <!-- Logout Button -->
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <button type="submit" 
+                        class="w-full flex items-center justify-between px-4 py-3 text-white hover:bg-[#1A2942] rounded-lg transition-all duration-200 group">
+                    <div class="flex items-center">
+                        <svg class="w-5 h-5 mr-3 text-gray-400 group-hover:text-red-400 transition-colors duration-200" 
+                             fill="none" 
+                             stroke="currentColor" 
+                             viewBox="0 0 24 24">
+                            <path stroke-linecap="round" 
+                                  stroke-linejoin="round" 
+                                  stroke-width="2" 
+                                  d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/>
+                        </svg>
+                        <span class="text-gray-400 group-hover:text-red-400 transition-colors duration-200">Logout</span>
+                    </div>
+                    <svg class="w-5 h-5 text-gray-400 group-hover:text-red-400 transition-colors duration-200" 
+                         fill="none" 
+                         stroke="currentColor" 
+                         viewBox="0 0 24 24">
+                        <path stroke-linecap="round" 
+                              stroke-linejoin="round" 
+                              stroke-width="2" 
+                              d="M9 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </form>
+        </div>
     </div>
 
     <!-- Main Content -->
@@ -607,7 +653,7 @@
                         <!-- Weekly Progress Chart -->
                         <div class="bg-white rounded-xl shadow-sm border border-[#E6D7F3] p-3">
                             <h3 class="text-sm font-semibold text-[#1F1A24] mb-2">Weekly Progress</h3>
-                            <canvas id="weeklyChart" height="100"></canvas>
+                            <canvas id="weeklyChart" height="80"></canvas>
                         </div>
 
                         <!-- Charts Script -->

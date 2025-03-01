@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Styles -->
     @vite('resources/css/app.css')
-    
+
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
@@ -18,21 +18,21 @@
         .perspective-1000 {
             perspective: 1500px;
         }
-        
+
         .rotate-y-2 {
             transform: rotateY(2deg);
         }
-        
+
         .rotate-x-2 {
             transform: rotateX(2deg);
         }
-        
+
         #tilt-card {
             transform-style: preserve-3d;
             will-change: transform;
             backface-visibility: hidden;
         }
-        
+
         #tilt-card img {
             transform-style: preserve-3d;
             will-change: transform;
@@ -99,30 +99,30 @@
             .newsletter-form input {
                 margin-bottom: 1rem;
             }
-            
+
             /* Better touch targets */
             .newsletter-form button {
                 padding: 0.875rem;
                 margin-top: 0.5rem;
             }
-            
+
             /* Adjusted text sizes */
             .newsletter-heading {
                 font-size: 1.5rem;
                 line-height: 1.3;
             }
-            
+
             /* Improved spacing */
             .newsletter-content {
                 padding: 1.5rem;
             }
         }
-        
+
         /* Smooth transitions */
         .newsletter-input {
             transition: all 0.2s ease-in-out;
         }
-        
+
         /* Focus states */
         .newsletter-input:focus {
             box-shadow: 0 0 0 2px rgba(108, 99, 255, 0.2);
@@ -172,7 +172,7 @@
         document.querySelectorAll('.animate-on-scroll').forEach((el) => {
             const animation = el.dataset.animation || 'fade-up';
             el.classList.add('opacity-0');
-            
+
             switch(animation) {
                 case 'fade-left':
                     el.classList.add('-translate-x-10');
@@ -211,11 +211,11 @@
 
                 <!-- Auth Buttons -->
                 <div class="flex items-center space-x-4">
-                    <a href="{{ route('login') }}" 
+                    <a href="{{ route('login') }}"
                        class="px-6 py-2 text-[#6C63FF] font-medium hover:text-[#5B53E0] transition-colors">
                         Sign In
                     </a>
-                    <a href="{{ route('register') }}" 
+                    <a href="{{ route('register') }}"
                        class="px-6 py-2 bg-[#6C63FF] text-white rounded-full font-medium hover:bg-[#5B53E0] transform hover:-translate-y-0.5 transition-all duration-200">
                         Get Started
                     </a>
@@ -228,31 +228,31 @@
     <section id="home" class="pt-32 pb-20 bg-gradient-to-b from-[#F5F5FF] to-white animate-on-scroll" data-animation="fade-up">
         <div class="container mx-auto px-6">
             <div class="flex flex-col items-center text-center mb-16">
-                <h1 class="text-6xl font-bold leading-tight text-gray-900 mb-6 max-w-4xl">
-                    Organize your learning journey, finally.
+                <h1 class="text-6xl font-bold leading-tight tracking-tight text-gray-900 mb-6 max-w-4xl">
+                    Kelola Tugas Harian Anda dengan Lebih Mudah
                 </h1>
                 <p class="text-xl text-gray-600 mb-8 max-w-2xl">
-                    Simplify your education with the world's best learning platform. Join millions of students achieving their goals.
+                    Aplikasi todo list modern yang membantu Anda tetap produktif dan terorganisir. Rencanakan, lacak, dan selesaikan tugas dengan lebih efisien.
                 </p>
                 <div class="flex items-center gap-4">
-                    <a href="{{ route('register') }}" 
+                    <a href="{{ route('register') }}"
                        class="px-8 py-4 bg-[#6C63FF] text-white rounded-lg font-medium hover:bg-[#5B53E0] transition-all">
-                        Start for free
+                        Mulai Gratis
                     </a>
                 </div>
                 <!-- Social Proof -->
                 <div class="mt-12 flex flex-wrap justify-center gap-8">
                     <div class="flex items-center gap-2">
-                        <span class="text-2xl font-bold text-gray-900">15K+</span>
-                        <span class="text-gray-600">Active Students</span>
+                        <span class="text-2xl font-bold text-gray-900">50K+</span>
+                        <span class="text-gray-600">Pengguna Aktif</span>
                     </div>
                     <div class="flex items-center gap-2">
-                        <span class="text-2xl font-bold text-gray-900">10K+</span>
-                        <span class="text-gray-600">Total Courses</span>
+                        <span class="text-2xl font-bold text-gray-900">1M+</span>
+                        <span class="text-gray-600">Tugas Selesai</span>
                     </div>
                     <div class="flex items-center gap-2">
-                        <span class="text-2xl font-bold text-gray-900">250+</span>
-                        <span class="text-gray-600">Expert Instructors</span>
+                        <span class="text-2xl font-bold text-gray-900">4.8/5</span>
+                        <span class="text-gray-600">Rating Pengguna</span>
                     </div>
                 </div>
             </div>
@@ -262,12 +262,12 @@
                     <div class="relative">
                         <!-- Glow Effect -->
                         <div class="absolute -inset-0.5 bg-gradient-to-r from-[#6C63FF] to-[#5B54D9] rounded-3xl opacity-20 blur-lg group-hover:opacity-30 transition duration-500"></div>
-                        
+
                         <!-- Main Image -->
-                        <img src="https://res.cloudinary.com/dzwqifa7j/image/upload/v1740593688/pklkthcnzrsjtk4n3sse.png" 
-                             alt="Learning Platform Interface" 
+                        <img src="https://res.cloudinary.com/dzwqifa7j/image/upload/v1740593688/pklkthcnzrsjtk4n3sse.png"
+                             alt="TodoList App Interface"
                              class="relative w-full rounded-3xl shadow-2xl transform transition-all duration-300">
-                        
+
                         <!-- 3D Shadow Effect -->
                         <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-black/5 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
                     </div>
@@ -283,28 +283,28 @@
                 <!-- First Row -->
                 <div class="grid grid-cols-2 md:grid-cols-5 gap-8 items-center mb-12">
                     <div class="flex justify-center">
-                        <img src="{{ asset('images/media/mkbhd.png') }}" 
-                             alt="MKBHD" 
+                        <img src="{{ asset('images/media/mkbhd.png') }}"
+                             alt="MKBHD"
                              class="h-8 object-contain grayscale hover:grayscale-0 transition-all">
                     </div>
                     <div class="flex justify-center">
-                        <img src="{{ asset('images/media/wirecutter.png') }}" 
-                             alt="Wirecutter" 
+                        <img src="{{ asset('images/media/wirecutter.png') }}"
+                             alt="Wirecutter"
                              class="h-8 object-contain grayscale hover:grayscale-0 transition-all">
                     </div>
                     <div class="flex justify-center">
-                        <img src="{{ asset('images/media/theverge.png') }}" 
-                             alt="The Verge" 
+                        <img src="{{ asset('images/media/theverge.png') }}"
+                             alt="The Verge"
                              class="h-8 object-contain grayscale hover:grayscale-0 transition-all">
                     </div>
                     <div class="flex justify-center">
-                        <img src="{{ asset('images/media/mashable.png') }}" 
-                             alt="Mashable" 
+                        <img src="{{ asset('images/media/mashable.png') }}"
+                             alt="Mashable"
                              class="h-8 object-contain grayscale hover:grayscale-0 transition-all">
                     </div>
                     <div class="flex justify-center">
-                        <img src="{{ asset('images/media/digitaltrends.png') }}" 
-                             alt="Digital Trends" 
+                        <img src="{{ asset('images/media/digitaltrends.png') }}"
+                             alt="Digital Trends"
                              class="h-8 object-contain grayscale hover:grayscale-0 transition-all">
                     </div>
                 </div>
@@ -312,23 +312,23 @@
                 <!-- Second Row -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
                     <div class="flex justify-center">
-                        <img src="{{ asset('images/media/lifehacker.png') }}" 
-                             alt="Lifehacker" 
+                        <img src="{{ asset('images/media/lifehacker.png') }}"
+                             alt="Lifehacker"
                              class="h-8 object-contain grayscale hover:grayscale-0 transition-all">
                     </div>
                     <div class="flex justify-center">
-                        <img src="{{ asset('images/media/gizmodo.png') }}" 
-                             alt="Gizmodo" 
+                        <img src="{{ asset('images/media/gizmodo.png') }}"
+                             alt="Gizmodo"
                              class="h-8 object-contain grayscale hover:grayscale-0 transition-all">
                     </div>
                     <div class="flex justify-center">
-                        <img src="{{ asset('images/media/androidcentral.png') }}" 
-                             alt="Android Central" 
+                        <img src="{{ asset('images/media/androidcentral.png') }}"
+                             alt="Android Central"
                              class="h-8 object-contain grayscale hover:grayscale-0 transition-all">
                     </div>
                     <div class="flex justify-center">
-                        <img src="{{ asset('images/media/androidauthority.png') }}" 
-                             alt="Android Authority" 
+                        <img src="{{ asset('images/media/androidauthority.png') }}"
+                             alt="Android Authority"
                              class="h-8 object-contain grayscale hover:grayscale-0 transition-all">
                     </div>
                 </div>
@@ -351,7 +351,7 @@
             <!-- Course Cards Container -->
             <div class="space-y-32">
                 <!-- Course 1 - Image Right -->
-                <div class="flex flex-col lg:flex-row items-center justify-around gap-10 md:gap-0 animate-on-scroll" data-animation="fade-up">
+                <div class="flex flex-col lg:flex-row items-center justify-evenly md:gap-0 animate-on-scroll" data-animation="fade-up">
                     <div class="lg:w-1/3">
                         <div class="max-w-xl">
                             <div class="inline-flex items-center px-4 py-2 bg-[#6C63FF]/10 rounded-full mb-6">
@@ -406,8 +406,8 @@
                     <div class="lg:w-1/3">
                         <div class="relative">
                             <div class="absolute inset-0 bg-[#6C63FF] rounded-3xl rotate-3 opacity-10"></div>
-                            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/to-do-list-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--checklist-task-work-completed-pack-business-illustrations-3926031.png" 
-                                 alt="Python Programming Course" 
+                            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/to-do-list-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--checklist-task-work-completed-pack-business-illustrations-3926031.png"
+                                 alt="Python Programming Course"
                                  class="relative rounded-3xl shadow-xl w-full">
                         </div>
                     </div>
@@ -418,8 +418,8 @@
                     <div class="lg:w-1/3">
                         <div class="relative">
                             <div class="absolute inset-0 bg-[#6C63FF] rounded-3xl -rotate-3 opacity-10"></div>
-                            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/check-list-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--checklist-todo-business-pack-illustrations-3626704.png" 
-                                 alt="Digital Marketing Course" 
+                            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/check-list-3d-illustration-download-in-png-blend-fbx-gltf-file-formats--checklist-todo-business-pack-illustrations-3626704.png"
+                                 alt="Digital Marketing Course"
                                  class="relative rounded-3xl shadow-xl w-full">
                         </div>
                     </div>
@@ -479,115 +479,7 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="py-20 bg-[#F5F5FF] animate-on-scroll" data-animation="fade-up">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-[#6C63FF] mb-4">Highly rated by users</h2>
-                <p class="text-2xl font-bold text-gray-900">Ongoing updates to stay preferred</p>
-            </div>
 
-            <div class="max-w-6xl mx-auto">
-                <!-- Grid container with masonry-like layout -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-auto">
-                    <!-- Testimonial 1 - Large -->
-                    <div class="bg-white p-6 rounded-xl hover:shadow-lg transition-shadow md:col-span-2 animate-on-scroll stagger-1" data-animation="fade-left">
-                        <div class="flex items-center gap-4 mb-4">
-                            <img src="https://source.unsplash.com/random/100x100?face-1" 
-                                 alt="User" 
-                                 class="w-12 h-12 rounded-full object-cover">
-                            <div>
-                                <h4 class="font-semibold text-gray-900">MyEducationDiscount.com</h4>
-                                <p class="text-sm text-gray-600">The home of EDU discounts for teachers</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-600">
-                            "TickTick, a task management app that helps users to stay organized, is recognizing educators and students with a 25% discount on TickTick Premium! With TickTick for Education, eligible teachers and students get more organized pricing and full access to TickTick's all-in-one time management solution."
-                        </p>
-                    </div>
-
-                    <!-- Testimonial 2 - Small -->
-                    <div class="bg-white p-6 rounded-xl hover:shadow-lg transition-shadow animate-on-scroll stagger-2" data-animation="fade-right">
-                        <div class="flex items-center gap-4 mb-4">
-                            <img src="https://source.unsplash.com/random/100x100?face-2" 
-                                 alt="User" 
-                                 class="w-12 h-12 rounded-full object-cover">
-                            <div>
-                                <h4 class="font-semibold text-gray-900">Yuuk</h4>
-                                <p class="text-sm text-gray-600">Product Designer</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-600">
-                            "The UI is simple and intuitive, and very easy to get started with. Lists show all the things I need to do and habits I want to track. Everything is just at a glance."
-                        </p>
-                    </div>
-
-                    <!-- Testimonial 3 - Small -->
-                    <div class="bg-white p-6 rounded-xl hover:shadow-lg transition-shadow animate-on-scroll stagger-3" data-animation="fade-left">
-                        <div class="flex items-center gap-4 mb-4">
-                            <img src="https://source.unsplash.com/random/100x100?face-3" 
-                                 alt="User" 
-                                 class="w-12 h-12 rounded-full object-cover">
-                            <div>
-                                <h4 class="font-semibold text-gray-900">Moe</h4>
-                                <p class="text-sm text-gray-600">Software Engineer Tech Geek</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-600">
-                            "Personally the reason I like TickTick is mainly the simplicity to organize and clean. TickTick is packed with features but only the ones that are absolutely necessary."
-                        </p>
-                    </div>
-
-                    <!-- Testimonial 4 - Large -->
-                    <div class="bg-white p-6 rounded-xl hover:shadow-lg transition-shadow md:col-span-2 animate-on-scroll stagger-4" data-animation="fade-right">
-                        <div class="flex items-center gap-4 mb-4">
-                            <img src="https://source.unsplash.com/random/100x100?face-4" 
-                                 alt="User" 
-                                 class="w-12 h-12 rounded-full object-cover">
-                            <div>
-                                <h4 class="font-semibold text-gray-900">Yohama Caraballo-Arias M.D.</h4>
-                                <p class="text-sm text-gray-600">IOSH, OAEC professor, writer and social chair @ OAEC Staff</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-600">
-                            "The Eisenhower matrix to view priorities has been a brilliant innovation. I use TickTick every day, especially the habit tracker with reminders and the focus function. I highly recommend it to my colleagues and students."
-                        </p>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-xl hover:shadow-lg transition-shadow md:col-span-2 animate-on-scroll stagger-5" data-animation="fade-left">
-                        <div class="flex items-center gap-4 mb-4">
-                            <img src="https://source.unsplash.com/random/100x100?face-4" 
-                                 alt="User" 
-                                 class="w-12 h-12 rounded-full object-cover">
-                            <div>
-                                <h4 class="font-semibold text-gray-900">Yohama Caraballo-Arias M.D.</h4>
-                                <p class="text-sm text-gray-600">IOSH, OAEC professor, writer and social chair @ OAEC Staff</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-600">
-                            "The Eisenhower matrix to view priorities has been a brilliant innovation. I use TickTick every day, especially the habit tracker with reminders and the focus function. I highly recommend it to my colleagues and students."
-                        </p>
-                    </div>
-
-                    <!-- Testimonial 5 - Small -->
-                    <div class="bg-white p-6 rounded-xl hover:shadow-lg transition-shadow animate-on-scroll stagger-1" data-animation="fade-left">
-                        <div class="flex items-center gap-4 mb-4">
-                            <img src="https://source.unsplash.com/random/100x100?face-5" 
-                                 alt="User" 
-                                 class="w-12 h-12 rounded-full object-cover">
-                            <div>
-                                <h4 class="font-semibold text-gray-900">DatingAdvice.com</h4>
-                                <p class="text-sm text-gray-600">"All things dating" daily</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-600">
-                            "TickTick can help singles and couples save time, so they get their work and errands done with enough time left over to spend with the people they love."
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Cross-Platform Section -->
     <section class="py-2 bg-white animate-on-scroll" data-animation="fade-up">
@@ -624,9 +516,9 @@
     <section class="py-20 bg-gradient-to-b from-white to-[#F5F5FF] animate-on-scroll" data-animation="fade-up">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Why students love 5 Minute School</h2>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Mengapa Pengguna Menyukai 4TODO</h2>
                 <p class="text-gray-600 max-w-2xl mx-auto">
-                    Join thousands of students who have transformed their learning experience with our innovative platform
+                    Bergabung dengan ribuan pengguna yang telah meningkatkan produktivitas mereka dengan fitur-fitur unggulan kami
                 </p>
             </div>
 
@@ -638,9 +530,9 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Lightning Fast Learning</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Manajemen Tugas Cepat</h3>
                     <p class="text-gray-600">
-                        Bite-sized lessons designed for quick understanding and maximum retention. Learn complex topics in just 5 minutes.
+                        Buat dan atur tugas dengan cepat. Fitur drag-and-drop intuitif dan shortcut keyboard membantu Anda tetap fokus pada pekerjaan.
                     </p>
                 </div>
 
@@ -651,9 +543,9 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Personalized Learning Path</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Prioritas & Kategori</h3>
                     <p class="text-gray-600">
-                        Adaptive learning system that adjusts to your pace and style. Get customized recommendations based on your progress.
+                        Kelompokkan tugas berdasarkan prioritas dan kategori. Gunakan label warna dan tag untuk organisasi yang lebih baik.
                     </p>
                 </div>
 
@@ -664,9 +556,9 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Expert Community</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Analytic Views</h3>
                     <p class="text-gray-600">
-                        Connect with expert instructors and fellow learners. Get answers to your questions and share knowledge.
+                        Kami menampilkan Jumlah berdasarkan Retensi Analytic di halaman TodoSpace utama.
                     </p>
                 </div>
 
@@ -677,9 +569,9 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Secure & Reliable</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Pengingat Pintar</h3>
                     <p class="text-gray-600">
-                        Your learning data is protected with enterprise-grade security. Access your content anytime, anywhere.
+                        Jangan lewatkan deadline dengan pengingat pintar. Sinkronisasi dengan kalender dan notifikasi yang dapat disesuaikan.
                     </p>
                 </div>
 
@@ -691,9 +583,9 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Progress Analytics</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Analisis Produktivitas</h3>
                     <p class="text-gray-600">
-                        Track your learning journey with detailed analytics. Visualize your progress and identify areas for improvement.
+                        Pantau produktivitas Anda dengan grafik dan laporan terperinci. Identifikasi pola dan tingkatkan efisiensi kerja.
                     </p>
                 </div>
 
@@ -704,9 +596,9 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                         </svg>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4">Learn at Your Pace</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Integrasi Lengkap</h3>
                     <p class="text-gray-600">
-                        No pressure, no deadlines. Study when it suits you best and take control of your learning schedule.
+                        Integrasikan dengan aplikasi favorit Anda seperti Google Calendar, Slack, dan Microsoft Teams untuk alur kerja yang mulus.
                     </p>
                 </div>
             </div>
@@ -714,7 +606,7 @@
             <!-- CTA Button -->
             <div class="text-center mt-12">
                 <a href="#" class="inline-flex items-center px-8 py-3 text-lg font-medium text-white bg-[#6C63FF] rounded-full hover:bg-[#5B54D9] transition-colors">
-                    Start Learning Now
+                    Mulai Gratis
                     <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                     </svg>
@@ -723,114 +615,210 @@
         </div>
     </section>
 
-    <!-- Newsletter Section -->
-    <section class="py-12 md:py-24 bg-gradient-to-br from-[#6C63FF]/5 via-white to-[#6C63FF]/5">
-        <div class="container mx-auto px-4 md:px-6">
-            <div class="relative max-w-6xl mx-auto">
-                <!-- Decorative Elements - Hidden on small mobile -->
-                <div class="absolute -top-12 -left-12 w-24 h-24 bg-[#6C63FF]/10 rounded-full blur-2xl hidden sm:block"></div>
-                <div class="absolute -bottom-12 -right-12 w-32 h-32 bg-[#6C63FF]/10 rounded-full blur-2xl hidden sm:block"></div>
-                
-                <!-- Main Content -->
-                <div class="relative bg-white rounded-3xl shadow-xl overflow-hidden">
-                    <div class="p-6 md:p-12">
-                        <!-- Content Grid -->
-                        <div class="flex flex-col lg:flex-row items-center gap-8 md:gap-12">
-                            <!-- Left Column - Text Content -->
-                            <div class="w-full lg:w-1/2 text-center lg:text-left">
-                                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                                    Stay Updated with Our Newsletter
-                                </h2>
-                                <p class="text-base md:text-lg text-gray-600 mb-6">
-                                    Get the latest updates, news and special offers sent directly to your inbox.
-                                </p>
-                                
-                                <!-- Trust Badges - Grid on mobile, row on desktop -->
-                                <div class="grid grid-cols-2 sm:flex gap-4 justify-center lg:justify-start mb-6">
-                                    <div class="flex items-center gap-2">
-                                        <svg class="w-5 h-5 text-[#6C63FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                        </svg>
-                                        <span class="text-sm text-gray-600">Weekly Updates</span>
-                                    </div>
-                                    <div class="flex items-center gap-2">
-                                        <svg class="w-5 h-5 text-[#6C63FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                        </svg>
-                                        <span class="text-sm text-gray-600">No Spam</span>
-                                    </div>
-                                    <div class="flex items-center gap-2">
-                                        <svg class="w-5 h-5 text-[#6C63FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                        </svg>
-                                        <span class="text-sm text-gray-600">Cancel Anytime</span>
-                                    </div>
-                                </div>
-                            </div>
+     <!-- Testimonials Section -->
+    <section class="py-20 bg-[#F5F5FF] animate-on-scroll" data-animation="fade-up">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-[#6C63FF] mb-4">Ulasan Pengguna Kami</h2>
+                <p class="text-2xl font-bold text-gray-900">Lihat apa yang dikatakan pengguna tentang TodoList App</p>
+            </div>
 
-                            <!-- Right Column - Form -->
-                            <div class="w-full lg:w-1/2">
-                                <form class="space-y-4">
-                                    <!-- Name Input -->
-                                    <div>
-                                        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Full Name</label>
-                                        <input type="text" 
-                                               id="name" 
-                                               class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#6C63FF] focus:border-transparent transition-all" 
-                                               placeholder="Enter your name">
-                                    </div>
-                                    
-                                    <!-- Email Input -->
-                                    <div>
-                                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
-                                        <input type="email" 
-                                               id="email" 
-                                               class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#6C63FF] focus:border-transparent transition-all" 
-                                               placeholder="Enter your email">
-                                    </div>
-                                    
-                                    <!-- Submit Button -->
-                                    <button type="submit" 
-                                            class="w-full px-6 py-3 bg-[#6C63FF] text-white rounded-xl font-medium hover:bg-[#5B53E0] transform hover:-translate-y-0.5 transition-all duration-200">
-                                        Subscribe Now
-                                    </button>
-                                    
-                                    <!-- Privacy Notice -->
-                                    <p class="text-xs text-center text-gray-500">
-                                        By subscribing, you agree to our 
-                                        <a href="#" class="text-[#6C63FF] hover:underline">Privacy Policy</a> 
-                                        and 
-                                        <a href="#" class="text-[#6C63FF] hover:underline">Terms of Service</a>
-                                    </p>
-                                </form>
+            <div class="max-w-6xl mx-auto">
+                <!-- Grid container with masonry-like layout -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-auto">
+                    <!-- Testimonial 1 - Large -->
+                    <div class="bg-white p-6 rounded-xl hover:shadow-lg transition-shadow md:col-span-2 animate-on-scroll stagger-1" data-animation="fade-left">
+                        <div class="flex items-center gap-4 mb-4">
+                            <img src="https://source.unsplash.com/random/100x100?face-1"
+                                 alt="User"
+                                 class="w-12 h-12 rounded-full object-cover">
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Budi Santoso</h4>
+                                <p class="text-sm text-gray-600">Project Manager di TechCorp</p>
                             </div>
                         </div>
+                        <p class="text-gray-600">
+                            "Aplikasi ini benar-benar mengubah cara tim kami mengelola proyek. Fitur kategorisasi dan prioritas tugas sangat membantu, plus kemampuan kolaborasi tim membuat produktivitas kami meningkat drastis. Interface-nya intuitif dan sinkronisasi di berbagai perangkat berjalan mulus. Sekarang jadi tools wajib untuk daily standup kami."
+                        </p>
                     </div>
-                </div>
-                
-                <!-- Social Proof - Optional -->
-                <div class="mt-8 text-center">
-                    <p class="text-sm text-gray-500">
-                        Trusted by 
-                        <span class="font-semibold text-gray-700">15,000+</span> 
-                        subscribers worldwide
-                    </p>
+
+                    <!-- Testimonial 2 - Small -->
+                    <div class="bg-white p-6 rounded-xl hover:shadow-lg transition-shadow animate-on-scroll stagger-2" data-animation="fade-right">
+                        <div class="flex items-center gap-4 mb-4">
+                            <img src="https://source.unsplash.com/random/100x100?face-2"
+                                 alt="User"
+                                 class="w-12 h-12 rounded-full object-cover">
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Dewi Lestari</h4>
+                                <p class="text-sm text-gray-600">Freelance Designer</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">
+                            "Akhirnya nemuin aplikasi todo list yang beneran membantu! Fitur pengingat berulang dan notifikasi pintar bikin saya nggak pernah telat deadline. Tampilannya juga clean, jadi tetap fokus sama yang penting."
+                        </p>
+                    </div>
+
+                    <!-- Testimonial 3 - Small -->
+                    <div class="bg-white p-6 rounded-xl hover:shadow-lg transition-shadow animate-on-scroll stagger-3" data-animation="fade-left">
+                        <div class="flex items-center gap-4 mb-4">
+                            <img src="https://source.unsplash.com/random/100x100?face-3"
+                                 alt="User"
+                                 class="w-12 h-12 rounded-full object-cover">
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Rina Wijaya</h4>
+                                <p class="text-sm text-gray-600">Mahasiswa UI</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">
+                            "Timer Pomodoro dan fitur kategorisasi tugas sangat membantu rutinitas belajar saya. Gampang tracking tugas kuliah dan jadwal belajar. Fitur habit tracking juga membantu bangun kebiasaan belajar yang lebih baik."
+                        </p>
+                    </div>
+
+                    <!-- Testimonial 4 - Large -->
+                    <div class="bg-white p-6 rounded-xl hover:shadow-lg transition-shadow md:col-span-2 animate-on-scroll stagger-4" data-animation="fade-right">
+                        <div class="flex items-center gap-4 mb-4">
+                            <img src="https://source.unsplash.com/random/100x100?face-4"
+                                 alt="User"
+                                 class="w-12 h-12 rounded-full object-cover">
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Ahmad Faisal</h4>
+                                <p class="text-sm text-gray-600">Pemilik UMKM</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">
+                            "Sebagai pemilik bisnis, saya harus handle banyak proyek setiap hari. Fitur prioritas tugas dan kolaborasi tim sangat membantu. Tag dan filter memudahkan sortir tugas, dan laporan analitik memberikan insight yang jelas tentang produktivitas tim kami."
+                        </p>
+                    </div>
+
+                    <!-- Testimonial 5 - Large -->
+                    <div class="bg-white p-6 rounded-xl hover:shadow-lg transition-shadow md:col-span-2 animate-on-scroll stagger-5" data-animation="fade-left">
+                        <div class="flex items-center gap-4 mb-4">
+                            <img src="https://source.unsplash.com/random/100x100?face-5"
+                                 alt="User"
+                                 class="w-12 h-12 rounded-full object-cover">
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Siti Rahayu</h4>
+                                <p class="text-sm text-gray-600">Digital Marketing Manager</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">
+                            "Integrasi kalender dan manajemen deadline sangat cocok untuk kampanye marketing kami. Mudah koordinasi berbagai proyek dan tracking deliverable. Kemampuan lampirkan file dan tambah komentar sangat membantu komunikasi tim."
+                        </p>
+                    </div>
+
+                    <!-- Testimonial 6 - Small -->
+                    <div class="bg-white p-6 rounded-xl hover:shadow-lg transition-shadow animate-on-scroll stagger-1" data-animation="fade-left">
+                        <div class="flex items-center gap-4 mb-4">
+                            <img src="https://source.unsplash.com/random/100x100?face-6"
+                                 alt="User"
+                                 class="w-12 h-12 rounded-full object-cover">
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Rudi Hermawan</h4>
+                                <p class="text-sm text-gray-600">Software Engineer</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">
+                            "Integrasi API dan shortcut keyboard bikin aplikasi ini jadi favorit developer. Bisa automate workflow dan sync dengan tools lain dengan mudah. Dark mode-nya enak di mata pas coding malam."
+                        </p>
+                    </div>
+
+                    <!-- Additional Testimonials -->
+                    <!-- Testimonial 7 - Small -->
+                    <div class="bg-white p-6 rounded-xl hover:shadow-lg transition-shadow animate-on-scroll stagger-2" data-animation="fade-right">
+                        <div class="flex items-center gap-4 mb-4">
+                            <img src="https://source.unsplash.com/random/100x100?face-7"
+                                 alt="User"
+                                 class="w-12 h-12 rounded-full object-cover">
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Anita Wijayanti</h4>
+                                <p class="text-sm text-gray-600">Content Creator</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">
+                            "Sebagai content creator, jadwal konten harus teratur. TodoList App bantu saya track ide konten, jadwal posting, dan kolaborasi dengan tim. Fitur reminder-nya bener-bener bikin konsisten posting!"
+                        </p>
+                    </div>
+
+                    <!-- Testimonial 8 - Large -->
+                    <div class="bg-white p-6 rounded-xl hover:shadow-lg transition-shadow md:col-span-2 animate-on-scroll stagger-3" data-animation="fade-left">
+                        <div class="flex items-center gap-4 mb-4">
+                            <img src="https://source.unsplash.com/random/100x100?face-8"
+                                 alt="User"
+                                 class="w-12 h-12 rounded-full object-cover">
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Bambang Kusumo</h4>
+                                <p class="text-sm text-gray-600">Kepala Sekolah SMA Negeri</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">
+                            "TodoList App membantu manajemen sekolah kami jadi lebih efisien. Dari jadwal rapat guru, agenda kegiatan sekolah, sampai monitoring tugas administrasi, semua jadi lebih terorganisir. Fitur berbagi tugas antarstaf sangat membantu koordinasi."
+                        </p>
+                    </div>
+
+                    <!-- Testimonial 9 - Small -->
+                    <div class="bg-white p-6 rounded-xl hover:shadow-lg transition-shadow animate-on-scroll stagger-4" data-animation="fade-right">
+                        <div class="flex items-center gap-4 mb-4">
+                            <img src="https://source.unsplash.com/random/100x100?face-9"
+                                 alt="User"
+                                 class="w-12 h-12 rounded-full object-cover">
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Maya Putri</h4>
+                                <p class="text-sm text-gray-600">Wedding Planner</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">
+                            "Perfect banget buat planning wedding! Bisa bikin checklist detail, share ke vendor-vendor, dan set deadline tiap milestone. Client juga bisa lihat progress langsung. Game changer buat bisnis wedding organizer!"
+                        </p>
+                    </div>
+
+                    <!-- Testimonial 10 - Small -->
+                    <div class="bg-white p-6 rounded-xl hover:shadow-lg transition-shadow animate-on-scroll stagger-5" data-animation="fade-left">
+                        <div class="flex items-center gap-4 mb-4">
+                            <img src="https://source.unsplash.com/random/100x100?face-10"
+                                 alt="User"
+                                 class="w-12 h-12 rounded-full object-cover">
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Dimas Prayoga</h4>
+                                <p class="text-sm text-gray-600">Personal Trainer</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">
+                            "Saya pakai buat tracking progress client fitness. Bisa set program latihan, jadwal konsultasi, dan reminder diet. Plus, clientnya juga bisa update progress langsung di app. Mantap!"
+                        </p>
+                    </div>
+
+
+
+                    <!-- Testimonial 12 - Small -->
+                    <div class="bg-white p-6 rounded-xl hover:shadow-lg transition-shadow animate-on-scroll stagger-2" data-animation="fade-left">
+                        <div class="flex items-center gap-4 mb-4">
+                            <img src="https://source.unsplash.com/random/100x100?face-12"
+                                 alt="User"
+                                 class="w-12 h-12 rounded-full object-cover">
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Fajar Ramadhan</h4>
+                                <p class="text-sm text-gray-600">Mahasiswa Kedokteran</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600">
+                            "TodoList App jadi asisten pribadi selama kuliah kedokteran. Bisa kategoriin tugas per mata kuliah, set jadwal praktikum, dan reminder ujian. Fitur attach file berguna banget buat nyimpen catatan kuliah!"
+                        </p>
+                    </div>
+
                 </div>
             </div>
         </div>
     </section>
 
- 
-
-    <!-- FAQ Section -->
-    <section class="py-24 bg-gradient-to-b from-[#F5F5FF] to-white animate-on-scroll" data-animation="fade-up">
+     <!-- FAQ Section -->
+     <section class="py-24 bg-gradient-to-b from-[#F5F5FF] to-white animate-on-scroll" data-animation="fade-up">
         <div class="container mx-auto px-6">
             <!-- Section Header -->
             <div class="text-center mb-16">
                 <span class="text-[#6C63FF] font-medium mb-4 block">FAQ</span>
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Frequently Asked Questions</h2>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Pertanyaan yang Sering Diajukan</h2>
                 <p class="text-xl text-gray-600 max-w-2xl mx-auto">
-                    Find answers to common questions about our platform and learning process
+                    Pertanyaan umum tentang platform manajemen tugas dan produktivitas kami
                 </p>
             </div>
 
@@ -845,7 +833,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                 </svg>
                             </span>
-                            <span class="text-lg font-semibold text-gray-900">How does the 5-minute learning concept work?</span>
+                            <span class="text-lg font-semibold text-gray-900">Bagaimana cara mengorganisir tugas di aplikasi ini?</span>
                         </div>
                         <svg class="w-5 h-5 text-gray-500 group-hover:text-[#6C63FF] transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -854,7 +842,7 @@
                     <div class="overflow-hidden transition-all duration-300 max-h-0 group-hover:max-h-96">
                         <div class="p-6 bg-white rounded-b-2xl">
                             <p class="text-gray-600">
-                                Our platform breaks down complex topics into bite-sized, 5-minute lessons. Each lesson is carefully crafted to deliver maximum value in minimal time, making it perfect for busy learners. You can learn at your own pace and easily fit lessons into your daily schedule.
+                                Aplikasi kami menggunakan sistem daftar tugas yang intuitif dengan fitur tag dan tingkat prioritas. Anda dapat membuat beberapa daftar, mengatur tenggat waktu, menambahkan pengingat, dan menggunakan matriks Eisenhower untuk memprioritaskan tugas. Semua data tersinkronisasi secara real-time di semua perangkat Anda.
                             </p>
                         </div>
                     </div>
@@ -869,7 +857,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
                                 </svg>
                             </span>
-                            <span class="text-lg font-semibold text-gray-900">What are the payment options available?</span>
+                            <span class="text-lg font-semibold text-gray-900">Apa saja pilihan berlangganan yang tersedia?</span>
                         </div>
                         <svg class="w-5 h-5 text-gray-500 group-hover:text-[#6C63FF] transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -878,7 +866,7 @@
                     <div class="overflow-hidden transition-all duration-300 max-h-0 group-hover:max-h-96">
                         <div class="p-6 bg-white rounded-b-2xl">
                             <p class="text-gray-600">
-                                We offer flexible payment options including monthly subscriptions and annual plans with significant savings. We accept all major credit cards, PayPal, and bank transfers. Choose the plan that best fits your learning needs and budget.
+                                Kami menawarkan paket Gratis dengan fitur dasar, dan paket Premium seharga Rp 79.000/bulan dengan fitur lanjutan seperti tugas tak terbatas, lampiran file, dukungan prioritas, dan alat kolaborasi tim. Berlangganan tahunan mendapat diskon 2 bulan. Tersedia diskon khusus untuk pelajar dan tim.
                             </p>
                         </div>
                     </div>
@@ -893,7 +881,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
                                 </svg>
                             </span>
-                            <span class="text-lg font-semibold text-gray-900">Are the certificates recognized by industry?</span>
+                            <span class="text-lg font-semibold text-gray-900">Apakah data saya aman dan ter-backup?</span>
                         </div>
                         <svg class="w-5 h-5 text-gray-500 group-hover:text-[#6C63FF] transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -902,7 +890,7 @@
                     <div class="overflow-hidden transition-all duration-300 max-h-0 group-hover:max-h-96">
                         <div class="p-6 bg-white rounded-b-2xl">
                             <p class="text-gray-600">
-                                Yes, our certificates are recognized by leading companies worldwide. They validate your skills and knowledge in specific areas. Many of our courses are also aligned with industry standards and professional certifications.
+                                Ya, kami sangat memperhatikan keamanan data. Semua tugas dan data Anda dienkripsi end-to-end dan disimpan di server cloud yang aman dengan backup rutin. Kami menggunakan enkripsi SSL standar industri dan mengikuti pedoman privasi yang ketat. Anda juga dapat mengekspor data Anda kapan saja.
                             </p>
                         </div>
                     </div>
@@ -917,7 +905,7 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"/>
                                 </svg>
                             </span>
-                            <span class="text-lg font-semibold text-gray-900">How can I get support if I'm stuck?</span>
+                            <span class="text-lg font-semibold text-gray-900">Bisakah saya berkolaborasi dengan tim saya?</span>
                         </div>
                         <svg class="w-5 h-5 text-gray-500 group-hover:text-[#6C63FF] transition-transform duration-200 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
@@ -926,7 +914,7 @@
                     <div class="overflow-hidden transition-all duration-300 max-h-0 group-hover:max-h-96">
                         <div class="p-6 bg-white rounded-b-2xl">
                             <p class="text-gray-600">
-                                We offer multiple support channels including 24/7 chat support, community forums, and direct mentor assistance. Our expert instructors are always ready to help you overcome any learning challenges you encounter.
+                                Tentu saja! Paket Premium kami mencakup fitur kolaborasi yang lengkap. Anda dapat berbagi daftar tugas, menugaskan pekerjaan, mengatur tenggat waktu tim, dan melacak kemajuan bersama. Anggota tim dapat memberikan komentar pada tugas, melampirkan file, dan menerima notifikasi. Cocok untuk tim kecil maupun organisasi besar.
                             </p>
                         </div>
                     </div>
@@ -935,9 +923,9 @@
 
             <!-- Contact Support -->
             <div class="text-center mt-12">
-                <p class="text-gray-600 mb-4">Still have questions?</p>
+                <p class="text-gray-600 mb-4">Masih punya pertanyaan?</p>
                 <a href="#" class="inline-flex items-center px-6 py-3 text-[#6C63FF] bg-[#6C63FF]/10 rounded-xl hover:bg-[#6C63FF] hover:text-white transition-all duration-200">
-                    Contact Support
+                    Hubungi Dukungan
                     <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                     </svg>
@@ -945,6 +933,104 @@
             </div>
         </div>
     </section>
+
+      <!-- Newsletter Section -->
+      <section class="py-12 md:py-24 bg-gradient-to-br from-[#6C63FF]/5 via-white to-[#6C63FF]/5">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="relative max-w-6xl mx-auto">
+                <!-- Decorative Elements - Hidden on small mobile -->
+                <div class="absolute -top-12 -left-12 w-24 h-24 bg-[#6C63FF]/10 rounded-full blur-2xl hidden sm:block"></div>
+                <div class="absolute -bottom-12 -right-12 w-32 h-32 bg-[#6C63FF]/10 rounded-full blur-2xl hidden sm:block"></div>
+
+                <!-- Main Content -->
+                <div class="relative bg-white rounded-3xl shadow-xl overflow-hidden">
+                    <div class="p-6 md:p-12">
+                        <!-- Content Grid -->
+                        <div class="flex flex-col lg:flex-row items-center gap-8 md:gap-12">
+                            <!-- Left Column - Text Content -->
+                            <div class="w-full lg:w-1/2 text-center lg:text-left">
+                                <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                                    Dapatkan Tips Produktivitas Mingguan
+                                </h2>
+                                <p class="text-base md:text-lg text-gray-600 mb-6">
+                                    Bergabunglah dengan ribuan pengguna 4ToDO untuk mendapatkan tips manajemen waktu, template tugas, dan pembaruan fitur terbaru.
+                                </p>
+
+                                <!-- Trust Badges - Grid on mobile, row on desktop -->
+                                <div class="grid grid-cols-2 sm:flex gap-4 justify-center lg:justify-start mb-6">
+                                    <div class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-[#6C63FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                        </svg>
+                                        <span class="text-sm text-gray-600">Tips Produktivitas</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-[#6C63FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                        </svg>
+                                        <span class="text-sm text-gray-600">Template Gratis</span>
+                                    </div>
+                                    <div class="flex items-center gap-2">
+                                        <svg class="w-5 h-5 text-[#6C63FF]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                                        </svg>
+                                        <span class="text-sm text-gray-600">Update Fitur</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right Column - Form -->
+                            <div class="w-full lg:w-1/2">
+                                <form class="space-y-4">
+                                    <!-- Name Input -->
+                                    <div>
+                                        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nama Lengkap</label>
+                                        <input type="text"
+                                               id="name"
+                                               class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#6C63FF] focus:border-transparent transition-all"
+                                               placeholder="Masukkan nama Anda">
+                                    </div>
+
+                                    <!-- Email Input -->
+                                    <div>
+                                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Alamat Email</label>
+                                        <input type="email"
+                                               id="email"
+                                               class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-[#6C63FF] focus:border-transparent transition-all"
+                                               placeholder="Masukkan email Anda">
+                                    </div>
+
+                                    <!-- Submit Button -->
+                                    <button type="submit"
+                                            class="w-full px-6 py-3 bg-[#6C63FF] text-white rounded-xl font-medium hover:bg-[#5B53E0] transform hover:-translate-y-0.5 transition-all duration-200">
+                                        Berlangganan Newsletter
+                                    </button>
+
+                                    <!-- Privacy Notice -->
+                                    <p class="text-xs text-center text-gray-500">
+                                        Dengan berlangganan, Anda menyetujui
+                                        <a href="#" class="text-[#6C63FF] hover:underline">Kebijakan Privasi</a>
+                                        dan
+                                        <a href="#" class="text-[#6C63FF] hover:underline">Ketentuan Layanan</a> kami
+                                    </p>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Proof -->
+                <div class="mt-8 text-center">
+                    <p class="text-sm text-gray-500">
+                        Dipercaya oleh
+                        <span class="font-semibold text-gray-700">15.000+</span>
+                        pengguna aktif di Indonesia
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <!-- Footer -->
     <footer class="bg-gray-50">
@@ -1041,7 +1127,7 @@
     document.addEventListener('DOMContentLoaded', function() {
         const card = document.getElementById('tilt-card');
         const container = card.parentElement;
-        
+
         // Reduced tilt settings for more subtle effect
         const TILT_SETTINGS = {
             max: 5, // Reduced from 15 to 5 degrees
@@ -1053,50 +1139,50 @@
 
         // Initialize start position
         let bounds = card.getBoundingClientRect();
-        
+
         function updateTilt(e) {
             const mouseX = e.clientX;
             const mouseY = e.clientY;
-            
+
             // Get position relative to card
             const xVal = (mouseX - bounds.x) / bounds.width;
             const yVal = (mouseY - bounds.y) / bounds.height;
-            
+
             // Calculate rotation angles with dampening
             const tiltX = ((TILT_SETTINGS.max / 2 - (yVal * TILT_SETTINGS.max)) * 0.8).toFixed(2); // Added dampening factor
             const tiltY = (((xVal * TILT_SETTINGS.max) - TILT_SETTINGS.max / 2) * 0.8).toFixed(2); // Added dampening factor
-            
+
             // Smoother transform with subtle movement
             requestAnimationFrame(() => {
                 card.style.transform = `
-                    perspective(${TILT_SETTINGS.perspective}px) 
-                    rotateX(${tiltX}deg) 
-                    rotateY(${tiltY}deg) 
+                    perspective(${TILT_SETTINGS.perspective}px)
+                    rotateX(${tiltX}deg)
+                    rotateY(${tiltY}deg)
                     scale3d(${TILT_SETTINGS.scale},${TILT_SETTINGS.scale},${TILT_SETTINGS.scale})
                 `;
             });
         }
-        
+
         function resetTilt() {
             requestAnimationFrame(() => {
                 card.style.transform = `
-                    perspective(${TILT_SETTINGS.perspective}px) 
-                    rotateX(0deg) 
-                    rotateY(0deg) 
+                    perspective(${TILT_SETTINGS.perspective}px)
+                    rotateX(0deg)
+                    rotateY(0deg)
                     scale3d(1,1,1)
                 `;
             });
         }
-        
+
         // Add event listeners with debounce for smoother performance
         let timeout;
         container.addEventListener('mousemove', (e) => {
             if (timeout) clearTimeout(timeout);
             timeout = setTimeout(() => updateTilt(e), 10);
         });
-        
+
         container.addEventListener('mouseleave', resetTilt);
-        
+
         // Update bounds on resize with debounce
         let resizeTimeout;
         window.addEventListener('resize', () => {
@@ -1105,10 +1191,10 @@
                 bounds = card.getBoundingClientRect();
             }, 100);
         });
-        
+
         // Add smoother transition style
         card.style.transition = `transform ${TILT_SETTINGS.speed}ms ${TILT_SETTINGS.easing}`;
     });
     </script>
 </body>
-</html> 
+</html>

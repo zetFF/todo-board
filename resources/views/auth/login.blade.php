@@ -126,12 +126,7 @@
 
                     <!-- Remember Me & Forgot Password -->
                     <div class="flex items-center justify-between mt-6">
-                        <label class="flex items-center space-x-2">
-                            <input type="checkbox" 
-                                   name="remember" 
-                                   class="w-4 h-4 rounded border-gray-300 text-[#6C63FF] focus:ring-[#6C63FF]">
-                            <span class="text-sm text-gray-600">Remember me</span>
-                        </label>
+                       
 
                         @if (Route::has('password.request'))
                             <a href="{{ route('password.request') }}" 

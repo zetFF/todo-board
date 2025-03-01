@@ -10,23 +10,20 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return redirect()->route('todos.index');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth'])->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-});
-
-Route::resource('todos', TodoController::class);
-
-Route::middleware(['auth'])->group(function () {
+    
+    Route::resource('todos', TodoController::class);
+    Route::patch('/todos/{todo}/toggle', [TodoController::class, 'toggle'])->name('todos.toggle');
+    
     Route::get('/settings', [SettingController::class, 'index'])->name('settings.index');
     Route::put('/settings/profile', [SettingController::class, 'updateProfile'])->name('settings.profile');
     Route::put('/settings/password', [SettingController::class, 'updatePassword'])->name('settings.password');
 });
-
-Route::patch('/todos/{todo}/toggle', [TodoController::class, 'toggle'])->name('todos.toggle');
 
 require __DIR__.'/auth.php';
